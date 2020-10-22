@@ -1,0 +1,37 @@
+<h1>Login View</h1>
+<a [routerLink]="['/tasks']">Go Back to Tasks</a>
+<form>
+	<div class="form-group">
+		<div class="form-group">
+			<label for="username">Username</label>
+			<input
+				type="text"
+				class="form-control"
+				id="username"
+				[(ngModel)]="username"
+				aria-describedby="emailHelp"
+			/>
+		</div>
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input
+				type="password"
+				class="form-control"
+				id="password"
+				[(ngModel)]="password"
+			/>
+		</div>
+		<div *ngIf="loginErr" class="form-group">
+			<div class="alert alert-danger warningAlert">
+				<h2>{{ loginErr }}</h2>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-warning mr-1" (click)="onReset()">
+			Reset
+		</button>
+		<button type="button" class="btn btn-primary" (click)="onLogin()">
+			Login
+		</button>
+	</div>
+</form>

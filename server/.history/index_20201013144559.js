@@ -1,0 +1,5 @@
+var server = require('./server/server')
+var requestRouter = require('./server/requestRouter')
+var requestHandlers = require('./server/responseHandlers')
+console.log('Index.js')
+// server.start(requestRouter.route, requestHandlers.handlers)

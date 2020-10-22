@@ -1,0 +1,14 @@
+<ngx-datatable
+	#taskGrid
+	class="material gritStyle"
+	[rows]="tasks"
+	[headerHeight]="50"
+	[rowHeight]="50"
+	[columnMode]="'force'"
+>
+	<ngx-datatable-column name="Description"></ngx-datatable-column>
+	<ngx-datatable-column
+		name="Category"
+		prop="taskCategory"
+	></ngx-datatable-column>
+</ngx-datatable>
