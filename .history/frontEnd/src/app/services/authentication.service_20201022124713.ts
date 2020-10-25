@@ -10,12 +10,12 @@ const servicePrefix: string = 'http://localhost:3000/';
 })
 export class AuthenticationService {
   options: object;
-  myHeaders = {
+  /* myHeaders = {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET, POST, PATCH, DELETE, PUT, OPTIONS',
     'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token, content-type'
-  };
+  }; */
   constructor(private http: HttpClient) {
     let optionHeaders: HttpHeaders = new HttpHeaders()
       .set('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8')
@@ -31,6 +31,6 @@ export class AuthenticationService {
     parameters += 'password' + '=' + Md5.hashStr(password);
     parameters += '&method=authenticate';
     const url = servicePrefix + 'login?' + parameters;
-    return this.http.get(url, { headers: this.myHeaders });
+    return this.http.get(url, this.options);
   }
 }
