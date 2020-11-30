@@ -1,0 +1,8 @@
+.taskFilterWrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.taskFilterAlert {
+  padding: 0.2rem 1.25ren;
+}

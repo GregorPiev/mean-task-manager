@@ -1,0 +1,33 @@
+{
+  "name": "task-manager-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently --kill others \"npm run start\"  \"npm run server\"",
+    "devnode": "concurrently --kill others \"npm run start\"",
+    "front": "cd ../frontEnd \"ng serve\"",
+    "kill": "npx kill-port 3000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.8",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "ts-md5": "^1.2.7"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "dateformat": "^3.0.3"
+  }
+}

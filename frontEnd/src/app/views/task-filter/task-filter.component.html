@@ -1,0 +1,23 @@
+<div class="taskFilterWrapper">
+    <div class="alert alert-danger warningAlert taskFilterAlert" *ngIf="filterError">
+        <h2>{{ filterError }}</h2>
+    </div>
+</div>
+<table>
+    <tr>
+        <td>Completed</td>
+        <td>Category</td>
+    </tr>
+    <tr>
+        <td>
+            <select [(ngModel)]="completed">
+				<option
+					*ngFor="let task of taskModel.taskCompletedOptions"
+					[value]="task.value"
+				>
+					{{ task.label }}
+				</option>
+			</select>
+        </td>
+    </tr>
+</table>
